@@ -1,0 +1,18 @@
+[
+    {
+        "Orbit1": {
+            "route": "Orbit1",
+            "distance": 18,
+            "craters": 20,
+            "point_one": "Silk Dorb",
+            "point_two": "Hallitharam"
+        },
+        "Orbit2": {
+            "route": "Orbit2",
+            "distance": 20,
+            "craters": 10,
+            "point_one": "Silk Dorb",
+            "point_two": "Hallitharam"
+        }
+    }
+]
