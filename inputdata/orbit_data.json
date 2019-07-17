@@ -1,5 +1,4 @@
-[
-    {
+{
         "Orbit1": {
             "route": "Orbit1",
             "distance": 18,
@@ -14,5 +13,4 @@
             "point_one": "Silk Dorb",
             "point_two": "Hallitharam"
         }
-    }
-]
+}

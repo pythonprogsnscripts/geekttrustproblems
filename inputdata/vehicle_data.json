@@ -1,5 +1,4 @@
-[
-    {
+{
         "bike": {
             "type": "bike",
             "max_speed": 10,
@@ -18,5 +17,4 @@
             "cross_cater": 3,
             "can_travel": ["SUNNY", "RAINY", "WINDY"]
         }
-    }
-]
+}
