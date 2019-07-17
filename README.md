@@ -1,3 +1,3 @@
-# Geektrust Traffic Problem
+# geekttrustproblems
 
-TODO
+This repo contains GeekTrust problems
