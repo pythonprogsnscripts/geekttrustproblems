@@ -3,6 +3,7 @@
             "route": "Orbit1",
             "distance": 18,
             "craters": 20,
+            "traffic_speed": 16,
             "point_one": "Silk Dorb",
             "point_two": "Hallitharam"
         },
@@ -10,6 +11,7 @@
             "route": "Orbit2",
             "distance": 20,
             "craters": 10,
+            "traffic_speed": 14,
             "point_one": "Silk Dorb",
             "point_two": "Hallitharam"
         }
