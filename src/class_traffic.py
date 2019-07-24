@@ -1,3 +1,5 @@
+import sys, os
+sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import orbit_data as odata
 
 class Vehicle():
@@ -65,4 +67,8 @@ class Orbit():
                                  ,odata[eachOrbit]['point_two']
                                   )
         return self
-                    
+
+# print(os.path.abspath(__file__))
+# print(os.path.dirname(os.path.abspath(__file__)))
+# print(sys.path.append(os.path.dirname(os.path.abspath(__file__))))
+# print(sys.path)
