@@ -1,6 +1,7 @@
 import sys, os
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import vehical_data
+from src.main import climate
 
 '''
 problem 1: lengaburu traffic
@@ -64,4 +65,4 @@ def getMinPath(climate,traffic_speed_orbit1,traffic_speed_orbit2):
         print("Vehicle {0} on Orbit2".format(orbit2[0]['name']))
 
 
-getMinPath(climate="Sunny",traffic_speed_orbit1=12,traffic_speed_orbit2=10)
+getMinPath(climate=climate[0],traffic_speed_orbit1=climate[1],traffic_speed_orbit2=climate[2])
