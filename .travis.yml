@@ -9,4 +9,4 @@ matrix:
         - pip install -r requirements.txt
 script:
   - pylint src/ --ignore=class_traffic.py
-  - python ./src/traffic_problem_1.py "Windy" 100 30
+  - src/traffic_problem_1.py "Windy" 100 30

@@ -1,2 +1,2 @@
-commando
+#commando
 pylint
