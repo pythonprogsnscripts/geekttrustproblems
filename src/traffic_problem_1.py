@@ -62,6 +62,7 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
     print("Orbit1 traffic speed is {0} megamiles/hour".format(traffic_speed_orbit1))
     print("Orbit1 traffic speed is {0} megamiles/hour".format(traffic_speed_orbit2))
     vehicles = getvehicles(climate)
+    print(vehicles)
     orbit1 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit1, \
                             orbit_distance=18, craters_count=20)
     orbit2 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit2, \
