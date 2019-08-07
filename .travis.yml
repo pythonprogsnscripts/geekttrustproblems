@@ -1,5 +1,5 @@
 language: python
-sudo: false
+sudo: true
 matrix:
   include:
     - name: "Python 3.7.1 on Xenial Linux"
@@ -9,4 +9,6 @@ matrix:
         - pip install -r requirements.txt
 script:
   - pylint src/ --ignore=class_traffic.py
+
+after_success:
   - src/traffic_problem_1.py "Windy" 100 30
