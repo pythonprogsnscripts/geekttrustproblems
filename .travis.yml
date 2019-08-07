@@ -11,4 +11,4 @@ script:
   - pylint src/ --ignore=class_traffic.py
 
 after_success:
-  - src/traffic_problem_1.py "Windy" 100 30
+  - python src/traffic_problem_1.py "Windy" 100 30
