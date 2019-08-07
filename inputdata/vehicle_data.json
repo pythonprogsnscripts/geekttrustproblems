@@ -1,20 +1,17 @@
 {
         "bike": {
-            "type": "bike",
+            "name": "bike",
             "max_speed": 10,
-            "cross_crater": 2,
-            "can_travel": ["SUNNY", "WINDY"]
+            "cross_crater_time": 2
         },
         "tuktuk": {
-            "type": "tuktuk",
+            "name": "tuktuk",
             "max_speed": 12,
-            "cross_cater": 1,
-            "can_travel": ["SUNNY", "RAINY"]
+            "cross_crater_time": 1
         },
-        "supercar": {
-            "type": "supercar",
+        "car": {
+            "name": "car",
             "max_speed": 20,
-            "cross_cater": 3,
-            "can_travel": ["SUNNY", "RAINY", "WINDY"]
+            "cross_crater_time": 3
         }
 }

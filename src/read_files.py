@@ -9,7 +9,3 @@ def read_json_data(json_file):
 # file_name = json_file.strip().split('.')[0]
 orbit_data = read_json_data(json_files[0])
 vehical_data = read_json_data(json_files[1])
-
-# print(orbit_data['Orbit1'])
-# print(vehical_data['bike']['can_travel'])
-# print(vehical_data['bike']['can_travel'][0])
