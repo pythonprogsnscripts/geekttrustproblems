@@ -1,2 +1,5 @@
 #commando
 pylint
+coverage
+codacy-coverage
+pytest-cov

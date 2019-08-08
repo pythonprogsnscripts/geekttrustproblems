@@ -8,3 +8,6 @@ install:
   - pip install -r requirements.txt
 script:
   - pylint src/ --ignore=class_traffic.py
+after_success:
+  - pytest --cov=. --cov-report xml
+  - python-codacy-coverage -r coverage.xml
