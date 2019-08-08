@@ -1,14 +1,10 @@
+dist: xenial
 language: python
-sudo: true
-matrix:
-  include:
-    - name: "Python 3.7.1 on Xenial Linux"
-      python: 3.7
-      dist: xenial
-      before_install:
-        - pip install -r requirements.txt
+
+python:
+  - "3.7"
+
+install:
+  - pip install -r requirements.txt
 script:
   - pylint src/ --ignore=class_traffic.py
-
-after_success:
-  - python src/traffic_problem_1.py "Windy" 100 30
