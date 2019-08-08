@@ -1,7 +1,10 @@
 '''
 Unit testing of read_file using PyTest framework
 '''
-from geektrust.src.read_files import JSON_FILES as file, VEHICLE_DATA as vehicle_data
+import sys
+import os
+sys.path.append(os.path.dirname(__file__)+"/../")
+from src.read_files import JSON_FILES as file, VEHICLE_DATA as vehicle_data
 
 def test_if_count_of_json_files_is_two():
     '''
