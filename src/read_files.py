@@ -6,7 +6,7 @@ placeholder for the data
 import json
 import os
 
-JSON_FILES = os.listdir('inputdata')
+JSON_FILES = sorted(os.listdir('inputdata'))
 
 def read_json_data(json_file):
     '''
