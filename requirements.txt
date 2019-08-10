@@ -3,3 +3,4 @@ pylint
 coverage
 codacy-coverage
 pytest-cov
+pytest
