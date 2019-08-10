@@ -1,5 +1,5 @@
 [run]
 omit = 
-   */tests/*
+   */test/*
    */**/__init__.py
    */src/class_traffic.py

@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import VEHICLE_DATA
-from src.main import CLIMATE as input_data
+from src.main import create_parser
 
 def getvehicles(climate):
     '''
@@ -71,5 +71,14 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
     else:
         print("Vehicle {0} on Orbit2".format(orbit2[0]['name']))
 
-get_shortest_path(climate=input_data[0], traffic_speed_orbit1=input_data[1], \
+def main():
+    '''
+    This function will parse the arguments from the user
+    '''
+    PARSER = create_parser()
+    ARGS = PARSER.parse_args()
+    input_data = [ARGS.Climate, ARGS.Orbit1, ARGS.Orbit2]
+    get_shortest_path(climate=input_data[0], traffic_speed_orbit1=input_data[1], \
                   traffic_speed_orbit2=input_data[2])
+if __name__ == "__main__":
+    main()
