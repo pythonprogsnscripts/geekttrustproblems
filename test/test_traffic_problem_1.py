@@ -1,6 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.dirname(__file__)+"/../")
+from src.read_files import VEHICLE_DATA
 from src import traffic_problem_1 as tp
 import pytest
 
