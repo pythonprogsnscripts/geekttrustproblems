@@ -74,16 +74,24 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
 def main():
     '''
     This function will parse the arguments from the user
+    Calls --> validate_input_data(climate)
     '''
     PARSER = create_parser()
     ARGS = PARSER.parse_args()
     input_data = [ARGS.Climate, ARGS.Orbit1, ARGS.Orbit2]
     check_climate_input = validate_input_data(ARGS.Climate)
-    if (check_climate_input):
+    if check_climate_input:
         get_shortest_path(climate=input_data[0], traffic_speed_orbit1=input_data[1], \
                   traffic_speed_orbit2=input_data[2])
 
 def validate_input_data(input_data):
+    '''
+    This function validates the climate input.
+    If user pass values other the 'Sunny', 'Rainy' or
+    'Windy' this function will return False boolean value
+        :param climate: Climate
+        :return : True or False
+    '''
     if input_data not in ['Sunny', 'Rainy', 'Windy']:
         print('Invalid climate input')
         return False
