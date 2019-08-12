@@ -21,9 +21,9 @@ def getvehicles(climate):
     car = VEHICLE_DATA['car']
 
     if climate == "Sunny":
-        vehicle = [[bike, tuktuk, car], -0.1]
+        vehicle = [[bike, tuktuk, car], 0.9]
     elif climate == "Rainy":
-        vehicle = [[car, tuktuk], 0.2]
+        vehicle = [[car, tuktuk], 1.2]
     else:
         vehicle = [[car, bike], 0.0]
     #
@@ -44,6 +44,7 @@ def get_orbit_time(vehicles, traffic_speed, orbit_distance, craters_count):
             temp_speed = traffic_speed
         else:
             temp_speed = i['max_speed']
+            
         temp = (orbit_distance + (vehicles[1] * craters_count)) \
                 * i['cross_crater_time'] + (60 / temp_speed) * orbit_distance
         orbit_1_vehicles_time.append(temp)
