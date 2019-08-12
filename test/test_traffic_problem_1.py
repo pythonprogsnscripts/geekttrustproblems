@@ -13,9 +13,9 @@ from src import traffic_problem_1 as tp
 
 @pytest.mark.parametrize('climate, speed',          \
                         [                           \
-                            ('Sunny', -0.1),        \
+                            ('Sunny', 0.9),        \
                             ('Windy', 0.0),         \
-                            ('Rainy', 0.2)
+                            ('Rainy', 1.2)
                         ])
 def test_when_climate_sunny_return_all_vechicles(climate, speed):
     '''
