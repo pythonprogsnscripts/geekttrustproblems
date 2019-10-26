@@ -2,4 +2,4 @@
 omit = 
    */test/*
    */**/__init__.py
-   */src/class_traffic.py
+   */src/class_*.py
