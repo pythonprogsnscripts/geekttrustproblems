@@ -6,7 +6,7 @@ and vehicle King Shan should take to reach Hallitharam the fastest
 '''
 import sys
 import os
-import constants
+from . import constants
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import VEHICLE_DATA
 from src.main import create_parser

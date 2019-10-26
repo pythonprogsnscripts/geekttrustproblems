@@ -7,15 +7,15 @@ import sys
 import os
 sys.path.append(os.path.dirname(__file__)+"/../")
 import pytest
-# from unittest import TestCase
 from src import traffic_problem_1 as tp
+from src import constants
 
 
-@pytest.mark.parametrize('climate, speed',          \
-                        [                           \
-                            ('Sunny', 0.9),        \
-                            ('Windy', 0.0),         \
-                            ('Rainy', 1.2)
+@pytest.mark.parametrize('climate, speed',                                          \
+                        [                                                           \
+                            ('Sunny', constants.CRATER_CHANGE_WHEN_SUNNY),          \
+                            ('Windy', constants.CRATER_CHANGE_WHEN_WINDY),          \
+                            ('Rainy', constants.CRATER_CHANGE_WHEN_RAINY)
                         ])
 def test_when_climate_sunny_return_all_vechicles(climate, speed):
     '''
