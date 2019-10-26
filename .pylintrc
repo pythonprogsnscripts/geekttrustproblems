@@ -1,2 +1,4 @@
 [MESSAGES CONTROL]
 disable=C0103, C0413, E0401, E1101
+[MASTER]
+ignore-patterns=^class
