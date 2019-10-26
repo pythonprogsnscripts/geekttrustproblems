@@ -1,9 +1,14 @@
+'''
+This is test file for main program
+Though it is not easy to test the argprase function,
+have tried to test the main file
+'''
 import sys
 import os
 
 sys.path.append(os.path.dirname(__file__)+"/../")
-from src.main import create_parser
 from unittest import TestCase
+from src.main import create_parser
 
 class CommandLineTestCase(TestCase):
     """
@@ -11,5 +16,8 @@ class CommandLineTestCase(TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        '''
+        This function test the creation of Parser
+        '''
         parser = create_parser()
         cls.parser = parser
