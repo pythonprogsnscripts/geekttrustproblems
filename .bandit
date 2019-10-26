@@ -1,2 +1,2 @@
 [bandit]
-skips: C0103
+skips: C0103,E1101

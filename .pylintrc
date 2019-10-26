@@ -1,4 +1,2 @@
 [MESSAGES CONTROL]
 disable=C0103, C0413, E0401
-[TYPECHECK]
-generated-members=constants
