@@ -64,10 +64,10 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
     print("Orbit1 traffic speed is {0} megamiles/hour".format(traffic_speed_orbit2))
     vehicles = getvehicles(climate)
     orbit1 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit1, \
-                            orbit_distance=constants.ORBIT1_ORBIT_DISTANCE, 
+                            orbit_distance=constants.ORBIT1_ORBIT_DISTANCE,
                             craters_count=constants.ORBIT1_CRATERS_COUNT)
     orbit2 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit2, \
-                            orbit_distance=constants.ORBIT2_ORBIT_DISTANCE, 
+                            orbit_distance=constants.ORBIT2_ORBIT_DISTANCE,
                             craters_count=constants.ORBIT2_CRATERS_COUNT)
     if orbit1[1] < orbit2[1]:
         print("Vehicle {0} on Orbit1".format(orbit1[0]['name']))
