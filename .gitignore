@@ -1,5 +1,7 @@
 # Locally generated files
 Traffic_Problem_1.zip
+src/class_orbit.py
+src/class_traffic.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
