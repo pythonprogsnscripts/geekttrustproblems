@@ -25,4 +25,21 @@ King wants to visit from one residential area to another residential area.
 
 ### Steps
 
-This problem has been solved using Python 3.7
+This problem has been solved using Python 3.7. There is a bifurcation between source files ad test files.
+
+### CI Pipeline
+
+Used Travis CI as the CI pipeline. The CI pipeline does the below steps:
+
+*   Install necessary python modules
+*   Do lint of python code
+*   Do lint of markdown code
+*   Run unit tests, with code coverage
+*   The code coverage and code quality results are published in [codacy][1]
+*   The build pipeline can be viewed [here][2]
+
+
+[ 1 ]: https://app.codacy.com/manual/pythonprogsnscripts/geekttrustproblems/dashboard
+[ 2 ]: https://travis-ci.org/pythonprogsnscripts/geekttrustproblems
+
+

@@ -6,10 +6,11 @@ and vehicle King Shan should take to reach Hallitharam the fastest
 '''
 import sys
 import os
+sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import VEHICLE_DATA
 from src.main import create_parser
-from . import constants
-sys.path.append(os.path.dirname(__file__)+"/../")
+from src.constants import *
+
 
 def getvehicles(climate):
     '''
@@ -22,11 +23,11 @@ def getvehicles(climate):
     car = VEHICLE_DATA['car']
 
     if climate == "Sunny":
-        vehicle = [[bike, tuktuk, car], constants.CRATER_CHANGE_WHEN_SUNNY]
+        vehicle = [[bike, tuktuk, car], CRATER_CHANGE_WHEN_SUNNY]
     elif climate == "Rainy":
-        vehicle = [[car, tuktuk], constants.CRATER_CHANGE_WHEN_RAINY]
+        vehicle = [[car, tuktuk], CRATER_CHANGE_WHEN_RAINY]
     else:
-        vehicle = [[car, bike], constants.CRATER_CHANGE_WHEN_WINDY]
+        vehicle = [[car, bike], CRATER_CHANGE_WHEN_WINDY]
     #
     return vehicle
 
@@ -64,11 +65,11 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
     print("Orbit1 traffic speed is {0} megamiles/hour".format(traffic_speed_orbit2))
     vehicles = getvehicles(climate)
     orbit1 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit1, \
-                            orbit_distance=constants.ORBIT1_ORBIT_DISTANCE,
-                            craters_count=constants.ORBIT1_CRATERS_COUNT)
+                            orbit_distance=ORBIT1_ORBIT_DISTANCE,
+                            craters_count=ORBIT1_CRATERS_COUNT)
     orbit2 = get_orbit_time(vehicles=vehicles, traffic_speed=traffic_speed_orbit2, \
-                            orbit_distance=constants.ORBIT2_ORBIT_DISTANCE,
-                            craters_count=constants.ORBIT2_CRATERS_COUNT)
+                            orbit_distance=ORBIT2_ORBIT_DISTANCE,
+                            craters_count=ORBIT2_CRATERS_COUNT)
     if orbit1[1] < orbit2[1]:
         print("Vehicle {0} on Orbit1".format(orbit1[0]['name']))
     else:
