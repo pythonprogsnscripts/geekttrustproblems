@@ -35,11 +35,9 @@ Used Travis CI as the CI pipeline. The CI pipeline does the below steps:
 *   Do lint of python code
 *   Do lint of markdown code
 *   Run unit tests, with code coverage
-*   The code coverage and code quality results are published in [codacy][1]
-*   The build pipeline can be viewed [here][2]
+*   The code coverage and code quality results are published in [codacy][codacy]
+*   The build pipeline can be viewed [here][travis]
 
 
-[ 1 ]: https://app.codacy.com/manual/pythonprogsnscripts/geekttrustproblems/dashboard
-[ 2 ]: https://travis-ci.org/pythonprogsnscripts/geekttrustproblems
-
-
+[ codacy ]: https://app.codacy.com/manual/pythonprogsnscripts/geekttrustproblems/dashboard
+[ travis ]: https://travis-ci.org/pythonprogsnscripts/geekttrustproblems
