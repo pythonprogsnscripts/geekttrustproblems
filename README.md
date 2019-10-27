@@ -38,6 +38,5 @@ Used Travis CI as the CI pipeline. The CI pipeline does the below steps:
 *   The code coverage and code quality results are published in [codacy][codacy]
 *   The build pipeline can be viewed [here][travis]
 
-
-[ codacy ]: https://app.codacy.com/manual/pythonprogsnscripts/geekttrustproblems/dashboard
-[ travis ]: https://travis-ci.org/pythonprogsnscripts/geekttrustproblems
+[codacy]: https://app.codacy.com/manual/pythonprogsnscripts/geekttrustproblems/dashboard
+[travis]: https://travis-ci.org/pythonprogsnscripts/geekttrustproblems
