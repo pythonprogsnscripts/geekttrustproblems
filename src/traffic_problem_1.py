@@ -6,9 +6,9 @@ and vehicle King Shan should take to reach Hallitharam the fastest
 '''
 import sys
 import os
+import argparse
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import VEHICLE_DATA
-from src.main import create_parser
 from src import constants
 
 
@@ -74,6 +74,27 @@ def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
         print("Vehicle {0} on Orbit1".format(orbit1[0]['name']))
     else:
         print("Vehicle {0} on Orbit2".format(orbit2[0]['name']))
+
+def create_parser():
+    '''
+        :param arg: Weather condition
+        :param metavar: variable
+        :param action: store the data
+        :param type: data type
+        :param help_message: help_message
+    '''
+    PARSER = argparse.ArgumentParser(prog='traffic_problem_one',                \
+                                description='Geek Trust traffic problem',       \
+                                allow_abbrev=False)
+
+    PARSER.add_argument('Climate', metavar='--climate', action='store',         \
+                        type=str, help='Climate condition')
+    PARSER.add_argument('Orbit1', metavar='--orbit1', action='store',           \
+                        type=int, help='Orbit 1 traffic speed')
+    PARSER.add_argument('Orbit2', metavar='--orbit2', action='store',
+                        type=int, help='Orbit 2 traffic speed')                 \
+
+    return PARSER
 
 def main():
     '''
