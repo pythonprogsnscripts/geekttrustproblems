@@ -9,7 +9,6 @@ import os
 import argparse
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.read_files import VEHICLE_DATA
-# from src.main import create_parser
 from src import constants
 
 
