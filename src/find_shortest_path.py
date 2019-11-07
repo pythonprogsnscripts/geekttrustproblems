@@ -8,6 +8,22 @@ from src import constants
 from src.get_vehicles import getvehicles
 from src.find_orbit_time import get_orbit_time
 
+# class Shortest(object):
+#   def __init__(self, climate, traffic_speed_orbit1, traffic_speed_orbit2):
+#     self._climate = climate
+#     self._traffic_speed_orbit1 = traffic_speed_orbit1
+#     self._traffic_speed_orbit2 = traffic_speed_orbit2
+
+#   def get_climate(self):
+#     return self._climate
+
+#   def get_traffic_speed_orbit1(self):
+#     return self._traffic_speed_orbit1
+
+#   def traffic_speed_orbit2(self):
+#     return self._traffic_speed_orbit2
+
+#   def set_climate(self, )
 def get_shortest_path(climate, traffic_speed_orbit1, traffic_speed_orbit2):
     '''
       :param climate: User input  CLimate

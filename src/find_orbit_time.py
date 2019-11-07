@@ -1,14 +1,24 @@
 '''
 Separating code for SRP
 '''
+# class Orbit(object):
+
+#     def __init__(self,vehicles, traffic_speed, orbit_distance, craters_count):
+#         self._vehicles = vehicles
+#         self._traffic_speed = traffic_speed
+#         self._orbit_distance = orbit_distance
+#         self._craters_count = craters_count
+
+#     def get_vehicles(self):
+#         return self._vehicles
 def get_orbit_time(vehicles, traffic_speed, orbit_distance, craters_count):
     '''
-     :param vehicles: Based on Climate, gets the available vehicles
-     :param traffic_speed: orbit traffic speed
-     :param orbit_distance: orbit distance
-     :param craters_count: Number of craters in particular orbit
-     :return: [Vehicle Details,minimum Time takes to travel in Minutes, Craters change ]
-     '''
+    :param vehicles: Based on Climate, gets the available vehicles
+    :param traffic_speed: orbit traffic speed
+    :param orbit_distance: orbit distance
+    :param craters_count: Number of craters in particular orbit
+    :return: [Vehicle Details,minimum Time takes to travel in Minutes, Craters change ]
+    '''
     orbit_1_vehicles_time = []
 
     for i in vehicles[0]:
