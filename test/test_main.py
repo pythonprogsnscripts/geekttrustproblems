@@ -8,7 +8,7 @@ import os
 
 sys.path.append(os.path.dirname(__file__)+"/../")
 from unittest import TestCase
-from src.main import create_parser
+from src.traffic_problem_1 import create_parser
 
 class CommandLineTestCase(TestCase):
     """

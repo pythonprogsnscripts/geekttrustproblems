@@ -8,6 +8,7 @@ and vehicle King Shan should take to reach Hallitharam the fastest
 import sys
 import os
 import argparse
+import collections
 sys.path.append(os.path.dirname(__file__)+"/../")
 from src.validate_input_data import validate_input_data
 from src.class_traffic import Traffic
@@ -31,19 +32,35 @@ def results():
     '''
     return PARSER.parse_args()
 
+def immutable_input_from_parser():
+    '''
+    Creating am immutable datastructure or functional datastructure
+    This is the fundamental for functional programming
+    '''
+    res = results()
+    Lengaburu = collections.namedtuple('Lengaburu', (
+        'climate',
+        'first_orbit_speed',
+        'second_orbit_speed'
+    ))
+    find_orbit_parameters = Lengaburu(climate=res.Climate                       \
+                                        , first_orbit_speed=res.Orbit1          \
+                                        , second_orbit_speed=res.Orbit2)
+    return find_orbit_parameters
+
 def getVars():
     '''
     The functions takes the results and processes. This function
     also check, whether valid climate condition has been given
     as input
     '''
-    res = results()
-    check_climate_input = validate_input_data(res.Climate)
+    res = immutable_input_from_parser()
+    check_climate_input = validate_input_data(res.climate)
     if check_climate_input:
         find_traffic = Traffic()
-        find_traffic.set_climate(res.Climate)
-        find_traffic.set_traffic_speed_orbit1(res.Orbit1)
-        find_traffic.set_traffic_speed_orbit2(res.Orbit2)
+        find_traffic.set_climate(res.climate)
+        find_traffic.set_traffic_speed_orbit1(res.first_orbit_speed)
+        find_traffic.set_traffic_speed_orbit2(res.second_orbit_speed)
 
 def main():
     '''
