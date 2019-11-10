@@ -5,8 +5,7 @@ This class is separated from the main program for SRP
 import sys
 import os
 sys.path.append(os.path.dirname(__file__)+"/../")
-from src.validate_input_data import validate_input_data
-from src.find_shortest_path import get_shortest_path
+from src.find_shortest_path import Shortest
 
 class Traffic:
     '''
@@ -55,4 +54,5 @@ class Traffic:
         self.__traffic_speed_orbit2 = traffic_speed_orbit_two
 
     def __shortest_path(self):
-        get_shortest_path(self.__climate, self.__traffic_speed_orbit1, self.__traffic_speed_orbit2)
+        s = Shortest()
+        s.get_shortest_path(self.__climate, self.__traffic_speed_orbit1, self.__traffic_speed_orbit2)
