@@ -10,7 +10,6 @@ import os
 import argparse
 import collections
 sys.path.append(os.path.dirname(__file__)+"/../")
-from src.validate_input_data import validate_input_data
 from src.class_traffic import Traffic
 
 PARSER = argparse.ArgumentParser(prog='traffic_problem_one',                \
@@ -38,15 +37,22 @@ def immutable_input_from_parser():
     This is the fundamental for functional programming
     '''
     res = results()
-    Lengaburu = collections.namedtuple('Lengaburu', (
+    Lengaburu = collections.namedtuple('Lengaburu', [
         'climate',
         'first_orbit_speed',
         'second_orbit_speed'
-    ))
-    find_orbit_parameters = Lengaburu(climate=res.Climate                       \
-                                        , first_orbit_speed=res.Orbit1          \
-                                        , second_orbit_speed=res.Orbit2)
-    return find_orbit_parameters
+    ])
+
+    find_orbit_parameters = (Lengaburu(climate=res.Climate, first_orbit_speed=res.Orbit1    \
+                                       , second_orbit_speed=res.Orbit2))
+
+    check_climate_input = tuple(filter(lambda x: x in ['Sunny', 'Windy', 'Rainy'],          \
+                                find_orbit_parameters))
+    if len(check_climate_input) == 0:
+        print('Invalid Climate input')
+        sys.exit()
+    else:
+        return find_orbit_parameters
 
 def getVars():
     '''
@@ -55,12 +61,10 @@ def getVars():
     as input
     '''
     res = immutable_input_from_parser()
-    check_climate_input = validate_input_data(res.climate)
-    if check_climate_input:
-        find_traffic = Traffic()
-        find_traffic.set_climate(res.climate)
-        find_traffic.set_traffic_speed_orbit1(res.first_orbit_speed)
-        find_traffic.set_traffic_speed_orbit2(res.second_orbit_speed)
+    find_traffic = Traffic()
+    find_traffic.set_climate(res.climate)
+    find_traffic.set_traffic_speed_orbit1(res.first_orbit_speed)
+    find_traffic.set_traffic_speed_orbit2(res.second_orbit_speed)
 
 def main():
     '''
