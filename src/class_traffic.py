@@ -12,8 +12,8 @@ class Traffic:
     Creating private methods and private attributes
     Encapsulation
     '''
-    def __init__(self, climate='Sunny', traffic_speed_orbit1=12, traffic_speed_orbit2=10):
-        self.__climate = climate
+    def __init__(self, climate, traffic_speed_orbit1, traffic_speed_orbit2):
+        self._climate = climate
         self.__traffic_speed_orbit1 = traffic_speed_orbit1
         self.__traffic_speed_orbit2 = traffic_speed_orbit2
         self.__shortest_path()
@@ -41,18 +41,18 @@ class Traffic:
         '''
         self.__climate = climate
 
-    def set_traffic_speed_orbit1(self, traffic_speed_orbit_one):
+    def set_traffic_speed_orbit1(self, traffic_speed_orbit1):
         '''
         Setter for traffic_speed_orbit1 attribute
         '''
-        self.__traffic_speed_orbit1 = traffic_speed_orbit_one
+        self.__traffic_speed_orbit1 = traffic_speed_orbit1
 
-    def set_traffic_speed_orbit2(self, traffic_speed_orbit_two):
+    def set_traffic_speed_orbit2(self, traffic_speed_orbit2):
         '''
         Setter for traffic_speed_orbit2 attribute
         '''
-        self.__traffic_speed_orbit2 = traffic_speed_orbit_two
+        self.__traffic_speed_orbit2 = traffic_speed_orbit2
 
     def __shortest_path(self):
         s = Shortest()
-        s.get_shortest_path(self.__climate, self.__traffic_speed_orbit1, self.__traffic_speed_orbit2)
+        s.get_shortest_path(self._climate, self.__traffic_speed_orbit1, self.__traffic_speed_orbit2)

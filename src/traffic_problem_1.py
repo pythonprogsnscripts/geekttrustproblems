@@ -61,10 +61,7 @@ def getVars():
     as input
     '''
     res = immutable_input_from_parser()
-    find_traffic = Traffic()
-    find_traffic.set_climate(res.climate)
-    find_traffic.set_traffic_speed_orbit1(res.first_orbit_speed)
-    find_traffic.set_traffic_speed_orbit2(res.second_orbit_speed)
+    find_traffic = Traffic(res.climate, res.first_orbit_speed, res.second_orbit_speed)
 
 def main():
     '''
