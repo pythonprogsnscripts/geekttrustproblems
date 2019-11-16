@@ -35,6 +35,7 @@ class Traffic:
         Getter for traffic_speed_orbit2 attribute
         '''
         return self.__traffic_speed_orbit2
+
     def set_climate(self, climate):
         '''
         Setter for climate attribute
